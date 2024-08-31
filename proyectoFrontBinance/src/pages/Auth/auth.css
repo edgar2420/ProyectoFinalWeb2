@@ -1,0 +1,35 @@
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 1px;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .navbar-brand-custom {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    margin-right: 15px;
+    font-size: 1.1rem;
+  }
+  
+  .navbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  
+  @media (max-width: 576px) {
+    .navbar {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  
