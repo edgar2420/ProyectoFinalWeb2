@@ -1,0 +1,16 @@
+<h1><%= hamburguesa.nombre %></h1>
+<img src="<%= hamburguesa.foto %>" alt="Foto de la Hamburguesa">
+<p><%= hamburguesa.descripcion %></p>
+<p>Precio: $<%= hamburguesa.precio %></p>
+
+<h2>Reviews</h2>
+<% hamburguesa.reviews.forEach(review => { %>
+    <p><%= review.comentario %></p>
+    <p>Puntuación: <%= review.puntuacion %>/5</p>
+<% }) %>
+
+<form action="/reviews/hamburguesa/<%= hamburguesa.id %>" method="POST">
+    <textarea name="comentario" placeholder="Escribe tu review aquí"></textarea>
+    <input type="number" name="puntuacion" max="5" min="1">
+    <button type="submit">Enviar Review</button>
+</form>
