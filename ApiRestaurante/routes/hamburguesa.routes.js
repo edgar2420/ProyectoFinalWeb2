@@ -1,9 +1,24 @@
 module.exports = app => {
     let router = require("express").Router();
-    const controller =
-        require("../controllers/hamburguesa.controller.js");
+    const hamburguesaController = require("../controllers/hamburguesa.controller.js");
 
+    // Mostrar formulario para crear hamburguesa
+    router.get('/crear', hamburguesaController.mostrarFormularioCrearHamburguesa);
 
-    app.use('/hamburguesa', router);
+    // Crear una nueva hamburguesa
+    router.post('/crear', hamburguesaController.crearHamburguesa);
 
+    // Listar todas las hamburguesas
+    router.get('/', hamburguesaController.obtenerHamburguesas);
+
+    // Mostrar formulario para editar hamburguesa
+    router.get('/editar/:id', hamburguesaController.mostrarFormularioEditarHamburguesa);
+
+    // Editar una hamburguesa existente
+    router.post('/editar/:id', hamburguesaController.editarHamburguesa);
+
+    // Eliminar una hamburguesa
+    router.post('/eliminar/:id', hamburguesaController.eliminarHamburguesa);
+
+    app.use('/hamburguesas', router);
 };
