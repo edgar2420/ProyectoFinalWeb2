@@ -1,0 +1,10 @@
+.crear-pelicula-container {
+    max-width: 75%;
+    min-width: 900px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: normal;
+    justify-content: normal;
+    align-items: stretch;
+}
